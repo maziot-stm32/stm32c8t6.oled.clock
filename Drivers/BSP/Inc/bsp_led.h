@@ -14,5 +14,7 @@
 #define LED_GPIO_Port GPIOC
 
 void led_init(void);
+void led_on(void);
+void led_off(void);
 
 #endif /* BSP_INC_BSP_LED_H_ */

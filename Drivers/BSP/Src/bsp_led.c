@@ -22,7 +22,7 @@ void led_init(void)
   ;
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LED_GPIO_Port, LED_PIN, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LED_GPIO_Port, LED_PIN, GPIO_PIN_SET);
 
   /*Configure GPIO pin : LED_PIN */
   GPIO_InitStruct.Pin = LED_PIN;
@@ -32,4 +32,13 @@ void led_init(void)
   HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
 }
 
+void led_on(void)
+{
+  HAL_GPIO_WritePin(LED_GPIO_Port, LED_PIN, GPIO_PIN_RESET);
+}
+
+void led_off(void)
+{
+  HAL_GPIO_WritePin(LED_GPIO_Port, LED_PIN, GPIO_PIN_SET);
+}
 
