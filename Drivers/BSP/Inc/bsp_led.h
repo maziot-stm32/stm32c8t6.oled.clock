@@ -10,8 +10,8 @@
 
 #include "main.h"
 
-#define LED_PIN GPIO_PIN_13
-#define LED_GPIO_Port GPIOC
+#define LED_PIN         GPIO_PIN_13
+#define LED_GPIO_PORT   GPIOC
 
 void led_init(void);
 void led_on(void);
